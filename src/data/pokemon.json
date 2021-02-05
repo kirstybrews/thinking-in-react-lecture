@@ -150,6 +150,27 @@
       "type": "fiya",
       "weight": "5",
       "id": 29
+    },
+    {
+      "name": "Adam",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/224.png",
+      "type": "Cool",
+      "weight": "12",
+      "id": 30
+    },
+    {
+      "name": "Danemon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/217.png",
+      "type": "Cool/Psychic ",
+      "weight": "12",
+      "id": 31
+    },
+    {
+      "name": "BlaireMOn",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/175.png",
+      "type": "TypeA",
+      "weight": "12",
+      "id": 32
     }
   ]
 }

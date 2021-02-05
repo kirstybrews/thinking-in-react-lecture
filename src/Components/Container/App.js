@@ -18,7 +18,8 @@ export default class App extends Component {
   state = {
     pokemon: [],
     team: [],
-    showForm: false
+    showForm: false,
+    searchText: ""
   }
 
   componentDidMount(){
@@ -32,6 +33,10 @@ export default class App extends Component {
   //   const pokemon = await res.json()
   //   this.setState({pokemon})
   // }
+
+  changeSearch = (text) => {
+    this.setState({searchText: text})
+  }
 
   addToTeam = (pokemon) => {
     if(!this.state.team.includes(pokemon)){
@@ -50,15 +55,19 @@ export default class App extends Component {
     this.setState({showForm: !this.state.showForm})
   }
 
-  render() {
+  addNewPokemon = (newPokemon) => {
+    this.setState({pokemon: [...this.state.pokemon, newPokemon]})
+  }
 
+  render() {
+    const filteredPokemon = this.state.pokemon.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.searchText.toLowerCase()))
     return (
       <div className="bg-dark">
-        <Navbar showForm={this.showForm} />
-        {this.state.showForm ? <Form /> : null}
+        <Navbar changeSearch={this.changeSearch} showForm={this.showForm} />
+        {this.state.showForm ? <Form addNewPoke={this.addNewPokemon} /> : null}
         <TeamContainer removeFromTeam={this.removeFromTeam} team={this.state.team}/>
         <div className="container">
-          <PokeContainer addToTeam={this.addToTeam} pokemon={this.state.pokemon}/>
+          <PokeContainer addToTeam={this.addToTeam} pokemon={filteredPokemon}/>
         </div>
       </div>
     )
