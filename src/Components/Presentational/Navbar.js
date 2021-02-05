@@ -6,7 +6,7 @@ export const Navbar = (props) => {
             <img className="w-25"
             src="https://raw.githubusercontent.com/learn-co-curriculum/js-pokemon-search-practice-assignment/master/images/pokemon.png"
             alt=""/>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a pokemon</button>
+            <button onClick={props.showForm} class="btn btn-outline-success my-2 my-sm-0" >Add a pokemon</button>
         </nav>
     )
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Card from '../Presentational/Card'
 
 export default class TeamContainer extends Component {
     render() {
@@ -7,7 +8,9 @@ export default class TeamContainer extends Component {
                 <h3 className="text-center text-light"> My team</h3>
                 <div className="row justify-content-center">
                     <div className="card-deck">
-                        
+                        {this.props.team.map(
+                            pokemon => <Card clickAction={this.props.removeFromTeam} pokemon={pokemon} />
+                        )}
                     </div>
                 </div>
             </div>
