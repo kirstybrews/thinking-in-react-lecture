@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Card} from '../Presentational/Card'
 
 export default class TeamContainer extends Component {
     render() {
