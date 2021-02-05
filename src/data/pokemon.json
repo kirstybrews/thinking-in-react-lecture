@@ -1,0 +1,155 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "sprite": "https://www.spriters-resource.com/resources/sheet_icons/31/33245.png",
+      "ability": "chlorophyll",
+      "weight": 12,
+      "type": "grass"
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      "ability": "chlorophyll",
+      "weight": 122,
+      "type": "grass"
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+      "ability": "Big Body",
+      "weight": 440,
+      "type": "grass"
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "ability": "fire tail",
+      "weight": 7,
+      "type": "fire"
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+      "ability": "teenage attitude",
+      "weight": 14,
+      "type": "fire"
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "ability": "wings",
+      "weight": 123,
+      "type": "fire"
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "ability": "water gun",
+      "weight": 10,
+      "type": "water"
+    },
+    {
+      "id": 8,
+      "name": "wartortle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+      "ability": "chlorophyll",
+      "weight": 20,
+      "type": "water"
+    },
+    {
+      "id": 9,
+      "name": "blastoise",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "ability": "chlorophyll",
+      "weight": 330,
+      "type": "water"
+    },
+    {
+      "name": "rob",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+      "id": 18,
+      "ability": "chlorophyll",
+      "weight": 10,
+      "type": "poison"
+    },
+    {
+      "name": "ashley",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+      "id": 20,
+      "ability": "chlorophyll",
+      "weight": 123,
+      "type": "psychic"
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/golbat.png",
+      "type": "Poop",
+      "weight": "12",
+      "id": 21
+    },
+    {
+      "name": "Adam",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "type": "Poop",
+      "weight": "12",
+      "id": 22
+    },
+    {
+      "name": "COOLMON",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+      "type": "Cool",
+      "weight": "123",
+      "id": 23
+    },
+    {
+      "name": "Haunter",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/haunter.png",
+      "type": "Ghost",
+      "weight": "1",
+      "id": 24
+    },
+    {
+      "name": "Golem",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/golem.png",
+      "type": "Rock",
+      "weight": "1234",
+      "id": 25
+    },
+    {
+      "name": "CoolestMon",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/quilava.png",
+      "type": "FIre",
+      "weight": "15",
+      "id": 26
+    },
+    {
+      "name": "Jynx",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/jynx.png",
+      "type": "Psychic",
+      "weight": "12",
+      "id": 27
+    },
+    {
+      "name": "Adam",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+      "type": "Poop",
+      "weight": "123",
+      "id": 28
+    },
+    {
+      "name": "cyndaquil ",
+      "sprite": "https://img.pokemondb.net/sprites/sword-shield/icon/cyndaquil.png",
+      "type": "fiya",
+      "weight": "5",
+      "id": 29
+    }
+  ]
+}
