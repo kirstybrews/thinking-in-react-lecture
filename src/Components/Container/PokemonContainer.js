@@ -6,7 +6,7 @@ export default class PokemonContainer extends Component {
         return (
             <div className="row justify-content-center">
                {this.props.pokemon.map(
-                   (pokemon) => <Card clickAction={this.props.addToTeam} pokemon={pokemon}/>
+                   (pokemon) => <Card updateWeight={this.props.updateWeight} team={this.props.team} clickAction={this.props.addToTeam} deletePoke={this.props.deletePoke} pokemon={pokemon}/>
                )}
             </div>
         )

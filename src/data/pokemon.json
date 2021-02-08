@@ -5,7 +5,7 @@
       "name": "bulbasaur",
       "sprite": "https://www.spriters-resource.com/resources/sheet_icons/31/33245.png",
       "ability": "chlorophyll",
-      "weight": 12,
+      "weight": 125,
       "type": "grass"
     },
     {
@@ -150,13 +150,6 @@
       "type": "fiya",
       "weight": "5",
       "id": 29
-    },
-    {
-      "name": "Adam",
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/224.png",
-      "type": "Cool",
-      "weight": "12",
-      "id": 30
     },
     {
       "name": "Danemon",

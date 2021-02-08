@@ -40,13 +40,17 @@ export default class App extends Component {
 
   addToTeam = (pokemon) => {
     if(!this.state.team.includes(pokemon)){
-      this.setState({team: [...this.state.team, pokemon]})
+      this.setState({
+        pokemon: this.state.pokemon.filter(poke => poke !== pokemon),
+        team: [...this.state.team, pokemon]
+      })
     }
   }
 
   removeFromTeam = (pokemon) => {
     let newTeam = this.state.team.filter(pokes => pokes.id !== pokemon.id)
     this.setState({
+      pokemon: [...this.state.pokemon, pokemon],
       team: newTeam
     })
   }
@@ -59,15 +63,49 @@ export default class App extends Component {
     this.setState({pokemon: [...this.state.pokemon, newPokemon]})
   }
 
+  deletePokemon = (pokemon) => {
+    const reqPack = {
+      method: 'DELETE'
+    }
+    fetch(`http://localhost:3000/pokemon/${pokemon.id}`, reqPack)
+      .then(r => r.json())
+      .then(this.setState({
+        pokemon: this.state.pokemon.filter(poke => poke !== pokemon)
+      }))
+  }
+
+  updateWeight = (newWeight, pokemon) => {
+    const updatedPokemon = {
+      weight: +newWeight
+    }
+
+    const reqPack = {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: 'PATCH',
+      body: JSON.stringify(updatedPokemon)
+    }
+
+    fetch(`http://localhost:3000/pokemon/${pokemon.id}`, reqPack)
+      .then(r => r.json())
+      .then(updatedPoke => {
+        this.setState({
+          pokemon: this.state.pokemon.map(poke => poke.id === updatedPoke.id ? updatedPoke : poke),
+          team: this.state.team.map(poke => poke.id === updatedPoke.id ? updatedPoke : poke)
+        })
+      })
+  }
+
   render() {
     const filteredPokemon = this.state.pokemon.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.searchText.toLowerCase()))
     return (
       <div className="bg-dark">
         <Navbar changeSearch={this.changeSearch} showForm={this.showForm} />
         {this.state.showForm ? <Form addNewPoke={this.addNewPokemon} /> : null}
-        <TeamContainer removeFromTeam={this.removeFromTeam} team={this.state.team}/>
+        <TeamContainer updateWeight={this.updateWeight} deletePoke={this.deletePokemon} removeFromTeam={this.removeFromTeam} team={this.state.team}/>
         <div className="container">
-          <PokeContainer addToTeam={this.addToTeam} pokemon={filteredPokemon}/>
+          <PokeContainer updateWeight={this.updateWeight} team={this.state.team} deletePoke={this.deletePokemon} addToTeam={this.addToTeam} pokemon={filteredPokemon}/>
         </div>
       </div>
     )

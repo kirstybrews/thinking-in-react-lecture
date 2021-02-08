@@ -9,7 +9,7 @@ export default class TeamContainer extends Component {
                 <div className="row justify-content-center">
                     <div className="card-deck">
                         {this.props.team.map(
-                            pokemon => <Card clickAction={this.props.removeFromTeam} pokemon={pokemon} />
+                            pokemon => <Card updateWeight={this.props.updateWeight} deletePoke={this.deletePokemon} team={this.props.team} clickAction={this.props.removeFromTeam} pokemon={pokemon} />
                         )}
                     </div>
                 </div>
